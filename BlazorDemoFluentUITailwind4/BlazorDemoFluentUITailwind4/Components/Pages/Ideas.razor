@@ -1,0 +1,370 @@
+﻿@page "/ideas"
+
+<PageTitle>Ideas</PageTitle>
+
+<section>
+    <header class="z-[9] top-0 bg-white sticky shadow">
+        <div class="bg-fl-neutral-fill-rest flex justify-between">
+            <div class="ml-4 py-4 flex select-none items-center text-lg font-bold md:py-0">
+                    Logo
+            </div>
+            <div>
+                <ul class="left-0 right-0 px-2 space-x-2 relative flex list-inside list-none">
+                    <li>
+                        <a href="#" class="p-4 none flex items-center no-underline hover:bg-fl-neutral-fill-hover md:inline-flex">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-4 flex items-center no-underline hover:bg-fl-neutral-fill-hover md:inline-flex">
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-4 flex items-center no-underline hover:bg-fl-neutral-fill-hover md:inline-flex">
+                            <span>About us</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="p-4 mx-auto max-w-7xl">
+        <div class="mt-10">&nbsp;</div>
+
+        <div class="from-pink-300 to-blue-300 p-0.5 shadow-pink-400 relative mx-auto max-w-md rounded-lg bg-gradient-to-tr shadow-md">
+            <div class="bg-white p-7 rounded-md">
+                <p class="mb-2 text-xl font-bold">Border gradient example</p>
+                <p>Create beautiful cards with borders using Tailwind CSS.</p>
+            </div>
+        </div>
+
+        <div style="min-height: 20px;">&nbsp;</div>
+
+        @* preline.co/docs/card.html *@
+
+        <FluentStack VerticalAlignment="VerticalAlignment.Center">
+            <FluentGrid>
+                <FluentGridItem xs="12" sm="12" md="6">
+                    <div class="shadow-xs border-gray-200 bg-white flex flex-col rounded-xl border">
+                        <img class="h-auto w-full rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+                        <div class="p-4 md:p-5">
+                            <h3 class="text-gray-800 text-lg font-bold dark:text-white">
+                                Card title
+                            </h3>
+                            <p class="mt-1 text-gray-500 dark:text-neutral-400">
+                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <a class="mt-2 gap-x-2 border-transparent bg-blue-600 px-3 py-2 text-white inline-flex items-center justify-center rounded-lg border text-sm font-medium hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                Go somewhere
+                            </a>
+                        </div>
+                    </div>
+                </FluentGridItem>
+                <FluentGridItem xs="12" sm="12" md="6">
+                    <div class="shadow-xs border-gray-200 bg-white flex flex-col rounded-xl border">
+                        <img class="h-auto w-full rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&q=80" alt="Card Image">
+                        <div class="p-4 md:p-5">
+                            <h3 class="text-gray-800 text-lg font-bold dark:text-white">
+                                Card title
+                            </h3>
+                            <p class="mt-1 text-gray-500 dark:text-neutral-400">
+                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                            </p>
+                            <a class="mt-2 gap-x-2 border-transparent bg-blue-600 px-3 py-2 text-white inline-flex items-center justify-center rounded-lg border text-sm font-medium hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+                                Go somewhere
+                            </a>
+                        </div>
+                    </div>
+                </FluentGridItem>
+            </FluentGrid>
+        </FluentStack>
+
+        <div class="mt-10">&nbsp;</div>
+
+        @* www.hyperui.dev/components/marketing/blog-cards *@
+        @* tailwindflex.com/@noob_dev/user-profile-card-with-cover-image *@
+
+        <FluentStack VerticalAlignment="VerticalAlignment.Center">
+            <FluentGrid>
+                <FluentGridItem xs="12" sm="12" md="6">
+                    <div class="overflow-hidden rounded-lg shadow transition hover:shadow-lg">
+                        <img alt=""
+                             src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                             class="h-56 w-full object-cover" />
+
+                        <div class="bg-white p-4 sm:p-6">
+                            <time datetime="2022-10-10" class="text-gray-500 block text-xs"> 10th Oct 2022 </time>
+
+                            <a href="#" class="no-underline">
+                                <p class="mt-0.5 text-gray-900 text-lg font-medium">How to position your furniture for positivity</p>
+                            </a>
+
+                            <p class="mt-2 text-sm/relaxed text-gray-500 line-clamp-3">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolores, possimus
+                                pariatur animi temporibus nesciunt praesentium dolore sed nulla ipsum eveniet corporis quidem,
+                                mollitia itaque minus soluta, voluptates neque explicabo tempora nisi culpa eius atque
+                                dignissimos. Molestias explicabo corporis voluptatem?
+                            </p>
+                        </div>
+                    </div>
+                </FluentGridItem>
+                <FluentGridItem xs="12" sm="12" md="6">
+                    <div id="app" class="bg-white w-128 h-60 card text-gray-500 flex rounded shadow-md hover:bg-blue-200">
+                        <img class="h-full w-1/2 rounded-l-sm" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Room Image">
+                        <div class="flex w-full flex-col">
+                            <div class="p-4 pb-0 flex-1">
+                                <h3 class="text-gray-900 mb-1 text-gray-500 font-light">Tower Hotel</h3>
+                                <div class="text-gray-900 mb-4 flex items-center text-xs">
+                                    Soho, London
+                                </div>
+                                <span class="text-gray-900 text-3xl font-semibold">£63.00<span class="text-xs">/PPPN</span></span>
+                                <div class="mt-4 flex items-center">
+                                    <div class="text-gray-900 pr-2 text-xs">
+                                        Free WiFi
+                                    </div>
+                                    <div class="text-gray-900 px-2 text-xs">
+                                        2mins to center
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-gray-900 bg-grey-lighter p-3 flex items-center justify-between font-semibold transition hover:bg-grey-light">
+                                Book Now
+                            </div>
+                        </div>
+                    </div>
+                </FluentGridItem>
+            </FluentGrid>
+        </FluentStack>
+
+        <div class="mt-10">&nbsp;</div>
+
+        @* <FluentStack Style="border-radius: 10px; border: 1px solid var(--accent-fill-rest); background-color: white;"> *@
+
+        <FluentStack VerticalAlignment="VerticalAlignment.Center" Style="border-radius: 10px; border: 1px solid LightGray; background-color: white;">
+            <FluentGrid>
+                <FluentGridItem xs="12">
+                    <div class="p-3 my-3 flex rounded">
+                        <!-- Card Image-->
+                        <div class="mt-2 hidden flex-shrink-0 md:block">
+                            <img class="w-56 rounded-lg" src="https://picsum.photos/300/200">
+                        </div>
+                        <!-- Card Body-->
+                        <div class="md:ml-6">
+                            <!--Card Heading -->
+                            <div>
+                                <h3 class="text-gray-800 text-2xl font-semibold">This is a heading of your well written blog post</h3>
+                            </div>
+                            <!--Card Meta -->
+                            <div class="space-y-1 my-1 flex flex-col items-start md:flex-row md:space-x-3 md:space-y-0 md:items-end">
+                                <p class="text-gray-600 space-x-1 flex max-w-max">&nbsp;</p>
+                                <p class="text-gray-600 space-x-1 flex max-w-max">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="mr-1 text-sm underline">TailwindCSS</span><span class="mr-1 text-sm underline">Livewire</span>
+                                </p>
+                                <p class="text-gray-600 space-x-1 flex max-w-max">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-sm">13th August 2022</span>
+                                </p>
+                                <p class="text-gray-600 space-x-1 flex max-w-max">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-sm">Jack Ryan</span>
+                                </p>
+                            </div>
+                            <!--Card Excerpt-->
+                            <div class="text-gray-600 my-2">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit qui error ad, pariatur accusantium earum sunt commodi sapiente ea autem eligendi iure aliquam explicabo, nobis delectus minus eius perferendis quia...
+                            </div>
+                            <!-- Read More Button-->
+                            <button class="px-2 py-1.5 text-white mr-3 my-2 border-amber-600 bg-amber-500 rounded border shadow hover:bg-amber-600">Read More</button>
+                        </div>
+                    </div>
+                </FluentGridItem>
+            </FluentGrid>
+        </FluentStack>
+
+        <div class="mt-10">&nbsp;</div>
+
+        @* tailwindcss.5balloons.info/components/cards/ *@
+
+        <div class="p-8 bg-gray-100 rounded-lg shadow">
+            <h3 class="text-gray-900 text-lg font-medium leading-6">
+                Last 30 days
+            </h3>
+            <div class="gap-5 mt-5 grid grid-cols-1 md:grid-cols-3">
+                <div class="bg-white overflow-hidden rounded-lg shadow hover:bg-green-200">
+                    <div class="px-4 pt-5 lgpt-5 lg:px-4">
+                        <dl>
+                            <dt class="text-gray-500 truncate text-sm font-medium leading-5">
+                                Total Subscribers
+                            </dt>
+                            <dd class="mt-1 text-gray-900 text-3xl font-semibold leading-9">
+                                <span>71,367</span><span>&nbsp;&nbsp;</span>
+                                <span class="mt-1 gap-1 bg-green-50 px-2 py-1 text-green-600 inline-flex items-center rounded-full text-xs font-semibold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-3 w-3">
+                                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                                    </svg>
+                                    Success
+                                </span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="bg-white overflow-hidden rounded-lg shadow">
+                    <div class="px-4 pt-5 lgpt-5 lg:px-4">
+                        <dl>
+                            <dt class="text-gray-500 truncate text-sm font-medium leading-5">
+                                Avg. Open Rate
+                            </dt>
+                            <dd class="mt-1 text-gray-900 text-3xl font-semibold leading-9">
+                                53.16%
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="bg-white overflow-hidden rounded-lg shadow">
+                    <div class="px-4 pt-5 lgpt-5 lg:px-4">
+                        <dl>
+                            <dt class="text-gray-500 truncate text-sm font-medium leading-5">
+                                Avg. Click Rate
+                            </dt>
+                            <dd class="mt-1 text-gray-900 text-3xl font-semibold leading-9">
+                                21.57%
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10">&nbsp;</div>
+
+        <!-- Card start -->
+        <div class="bg-white mx-auto max-w-sm overflow-hidden rounded-lg shadow-lg">
+            <div class="px-4 pb-6 border-b">
+                <div class="my-4 text-center">
+                    <img class="h-32 w-32 border-white my-4 mx-auto rounded-full border-4 dark:border-gray-800"
+                         src="https://randomuser.me/api/portraits/women/21.jpg" alt="">
+                    <div class="py-2">
+                        <h3 class="text-gray-800 mb-1 text-2xl font-bold dark:text-white">Cait Genevieve</h3>
+                        <div class="text-gray-700 inline-flex items-center dark:text-gray-300">
+                            <svg class="h-5 w-5 text-gray-400 mr-1 dark:text-gray-600" fill="currentColor"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path class=""
+                                      d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                            </svg>
+                            New York, NY
+                        </div>
+                    </div>
+                </div>
+                <div class="gap-2 px-2 flex">
+                    <button class="bg-blue-600 text-white px-4 py-2 flex-1 rounded-full font-bold antialiased hover:bg-blue-800 dark:bg-blue-800 dark:text-white dark:hover:bg-blue-900">
+                        Follow
+                    </button>
+                    <button class="border-gray-400 text-black px-4 py-2 bg-white flex-1 rounded-full border-2 font-semibold">
+                        Message
+                    </button>
+                </div>
+            </div>
+            <div class="px-4 py-4">
+                <div class="gap-2 text-gray-800 mb-4 flex items-center dark:text-gray-300">
+                    <svg class="h-6 w-6 text-gray-600 dark:text-gray-400" fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path class=""
+                              d="M12 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v2z" />
+                    </svg>
+                    <span><strong class="text-black dark:text-white">12</strong> Followers you know</span>
+                </div>
+                <div class="flex">
+                    <div class="mr-2 flex justify-end">
+                        <img class="border-white h-10 w-10 -mr-2 rounded-full border-2 dark:border-gray-800"
+                             src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                        <img class="border-white h-10 w-10 -mr-2 rounded-full border-2 dark:border-gray-800"
+                             src="https://randomuser.me/api/portraits/women/31.jpg" alt="">
+                        <img class="border-white h-10 w-10 -mr-2 rounded-full border-2 dark:border-gray-800"
+                             src="https://randomuser.me/api/portraits/men/33.jpg" alt="">
+                        <img class="border-white h-10 w-10 -mr-2 rounded-full border-2 dark:border-gray-800"
+                             src="https://randomuser.me/api/portraits/women/32.jpg" alt="">
+                        <img class="border-white h-10 w-10 -mr-2 rounded-full border-2 dark:border-gray-800"
+                             src="https://randomuser.me/api/portraits/men/44.jpg" alt="">
+                        <img class="border-white h-10 w-10 -mr-2 rounded-full border-2 dark:border-gray-800"
+                             src="https://randomuser.me/api/portraits/women/42.jpg" alt="">
+                        <span class="bg-white text-gray-800 border-gray-200 h-10 w-10 flex items-center justify-center rounded-full border-2 text-sm font-semibold dark:bg-gray-800 dark:text-white dark:border-gray-700">
+                            +999
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Card end -->
+
+        <div class="mt-10">&nbsp;</div>
+
+        <div class="mx-4 mt-16 bg-white text-gray-900 max-w-2xl rounded-lg shadow-xl sm:max-w-sm sm:mx-auto md:max-w-sm md:mx-auto lg:max-w-sm lg:mx-auto xl:max-w-sm xl:mx-auto">
+            <div class="h-32 overflow-hidden rounded-t-lg">
+                <img class="w-full object-cover object-top" src='https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt='Mountain'>
+            </div>
+            <div class="-mt-16 h-32 w-32 border-white relative mx-auto overflow-hidden rounded-full border-4">
+                <img class="h-32 object-cover object-center" src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt='Woman looking front'>
+            </div>
+            <div class="mt-2 text-center">
+                <h2 class="font-semibold">Sarah Smith</h2>
+                <p class="text-gray-500">Freelance Web Designer</p>
+            </div>
+            <ul class="mt-2 py-4 text-gray-700 flex items-center justify-around">
+                <li class="flex flex-col items-center justify-around">
+                    <svg class="w-4 fill-current text-blue-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                    </svg>
+                    <div>2k</div>
+                </li>
+                <li class="flex flex-col items-center justify-between">
+                    <svg class="w-4 fill-current text-blue-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M7 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1c2.15 0 4.2.4 6.1 1.09L12 16h-1.25L10 20H4l-.75-4H2L.9 10.09A17.93 17.93 0 0 1 7 9zm8.31.17c1.32.18 2.59.48 3.8.92L18 16h-1.25L16 20h-3.96l.37-2h1.25l1.65-8.83zM13 0a4 4 0 1 1-1.33 7.76 5.96 5.96 0 0 0 0-7.52C12.1.1 12.53 0 13 0z" />
+                    </svg>
+                    <div>10k</div>
+                </li>
+                <li class="flex flex-col items-center justify-around">
+                    <svg class="w-4 fill-current text-blue-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
+                    </svg>
+                    <div>15</div>
+                </li>
+            </ul>
+            <div class="mx-8 mt-2 p-4 border-t">
+                <button class="bg-gray-900 px-6 py-2 text-white mx-auto block w-1/2 rounded-full font-semibold hover:shadow-lg">Follow</button>
+            </div>
+        </div>
+
+        <!-- component -->
+        <div class="my-3 bg-blue-500 max-w-xs overflow-hidden rounded-3xl shadow-xl">
+            <img src="https://i.imgur.com/dYcYQ7E.png" class="w-full" />
+            <div class="-mt-8 flex justify-center">
+                <img src="https://randomuser.me/api/portraits/women/21.jpg" class="border-cyan-200 rounded-full border-4 border-solid">
+            </div>
+            <div class="px-3 pb-6 pt-2 text-center">
+                <h3 class="text-white bold font-sans text-sm">Olivia Dunham</h3>
+                <p class="mt-2 text-white font-sans font-light">Hello, i'm from another the other side!</p>
+            </div>
+            <div class="pb-3 text-white flex justify-center">
+                <div class="mr-3 pr-3 border-r text-center">
+                    <h2>34</h2>
+                    <span>Photos</span>
+                </div>
+                <div class="text-center">
+                    <h2>42</h2>
+                    <span>Friends</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>
+
+<div class="mt-10">&nbsp;</div>
+

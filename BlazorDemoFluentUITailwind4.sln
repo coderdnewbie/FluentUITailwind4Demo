@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDemoFluentUITailwind4", "BlazorDemoFluentUITailwind4\BlazorDemoFluentUITailwind4\BlazorDemoFluentUITailwind4.csproj", "{4F1ACFF6-ACE5-44C8-9A48-BD4B0CDE3398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDemoFluentUITailwind4.Client", "BlazorDemoFluentUITailwind4\BlazorDemoFluentUITailwind4.Client\BlazorDemoFluentUITailwind4.Client.csproj", "{3C6D0075-62CF-4E26-8BE4-9B8E50FB6FA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F1ACFF6-ACE5-44C8-9A48-BD4B0CDE3398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F1ACFF6-ACE5-44C8-9A48-BD4B0CDE3398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F1ACFF6-ACE5-44C8-9A48-BD4B0CDE3398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F1ACFF6-ACE5-44C8-9A48-BD4B0CDE3398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C6D0075-62CF-4E26-8BE4-9B8E50FB6FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6D0075-62CF-4E26-8BE4-9B8E50FB6FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6D0075-62CF-4E26-8BE4-9B8E50FB6FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6D0075-62CF-4E26-8BE4-9B8E50FB6FA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

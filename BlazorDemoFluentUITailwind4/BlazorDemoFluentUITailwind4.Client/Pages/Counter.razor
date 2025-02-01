@@ -1,0 +1,27 @@
+﻿@page "/counter"
+@rendermode InteractiveAuto
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<div role="status" style="padding-bottom: 1em;">
+    Current count: <FluentBadge Appearance="Appearance.Neutral">@currentCount</FluentBadge>
+</div>
+
+<FluentButton Appearance="Appearance.Accent" @onclick="IncrementCount">FluentUI Click me</FluentButton>
+
+<p></p>
+
+<div type="button" class="bg-green-700 text-white py-2 px-4 unselectable inline rounded-lg font-medium hover:bg-green-800 hover:ring-2 hover:ring-green-300 hover:ring-offset-4" @onclick="IncrementCount">Tailwind Click me</div>
+
+
+@code {
+
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

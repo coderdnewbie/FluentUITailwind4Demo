@@ -1,0 +1,79 @@
+﻿@page "/theme"
+@rendermode InteractiveServer
+
+<FluentDesignTheme @bind-Mode="@Mode"
+                   @bind-OfficeColor="@OfficeColor"
+                   OnLoaded="@OnLoaded"
+                   OnLuminanceChanged="@OnLuminanceChanged"
+                   StorageName="theme" />
+
+<div class="tw-mt-1"></div>
+<div style="min-height: 250px;">
+    <FluentGrid>
+        <FluentGridItem>
+            <FluentSelect Label="Theme"
+                          Width="250px"
+                          Items="@(Enum.GetValues<DesignThemeModes>())"
+                          @bind-SelectedOption="@Mode" />
+        </FluentGridItem>
+
+        <FluentGridItem>
+            <FluentSelect Label="Color"
+                          Items="@(Enum.GetValues<OfficeColor>().Select(i => (OfficeColor?)i))"
+                          Height="200px"
+                          Width="250px"
+                          @bind-SelectedOption="@OfficeColor">
+                <OptionTemplate>
+                    <FluentStack>
+                        <FluentIcon Value="@(new Icons.Filled.Size20.RectangleLandscape())"
+                                    Color="Color.Custom"
+                                    CustomColor="@(@context.ToAttributeValue() != "default" ? context.ToAttributeValue() : "#036ac4" )" />
+                        <FluentLabel>@context</FluentLabel>
+                    </FluentStack>
+                </OptionTemplate>
+            </FluentSelect>
+            <div class="tw-mt-0.5">&nbsp;</div>
+            <FluentButton Appearance="Appearance.Accent" OnClick="PickRandomColor">Feeling lucky?</FluentButton>
+            <FluentButton Appearance="Appearance.Accent" OnClick="ResetToDefault">Reset</FluentButton>
+        </FluentGridItem>
+    </FluentGrid>
+
+    @* note: need the divs so that the buttons dont merge into each other *@
+
+    <FluentStack Style="max-width: 340px; margin: 12px 0px; padding: 12px; border: 1px solid var(--accent-fill-rest);">
+        <FluentIcon Value="@(new Icons.Regular.Size24.Airplane())" />
+        <FluentLabel>Test content</FluentLabel>
+        <div><FluentButton Appearance="Appearance.Outline">Outline btn</FluentButton></div>
+        <div><FluentButton Appearance="Appearance.Accent">Accent btn</FluentButton></div>
+    </FluentStack>
+</div>
+
+@code
+{
+    public DesignThemeModes Mode { get; set; }
+
+
+
+    public OfficeColor? OfficeColor { get; set; }
+
+    void OnLoaded(LoadedEventArgs e)
+    {
+        //DemoLogger.WriteLine($"Loaded: {(e.Mode == DesignThemeModes.System ? "System" : "")} {(e.IsDark ? "Dark" : "Light")}");
+    }
+
+    void OnLuminanceChanged(LuminanceChangedEventArgs e)
+    {
+        //DemoLogger.WriteLine($"Changed: {(e.Mode == DesignThemeModes.System ? "System" : "")} {(e.IsDark ? "Dark" : "Light")}");
+    }
+
+    void PickRandomColor()
+    {
+        OfficeColor = OfficeColorUtilities.GetRandom();
+    }
+
+    void ResetToDefault()
+    {
+        Mode = DesignThemeModes.System;
+        OfficeColor = Microsoft.FluentUI.AspNetCore.Components.OfficeColor.Default;
+    }
+}

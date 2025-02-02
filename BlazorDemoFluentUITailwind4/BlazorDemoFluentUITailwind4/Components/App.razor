@@ -11,11 +11,14 @@
     <link rel="stylesheet" href="@Assets["BlazorDemoFluentUITailwind4.styles.css"]" />
     <ImportMap />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <HeadOutlet />
+    <HeadOutlet @rendermode="InteractiveServer" />
+    @* Stop initial page flash when using theming *@
+    <script src="_content/Microsoft.FluentUI.AspNetCore.Components/js/loading-theme.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <Routes />
+    <loading-theme storage-name="theme"></loading-theme>
+    <Routes @rendermode="InteractiveServer" />
     <script src="_framework/blazor.web.js"></script>
 </body>
 

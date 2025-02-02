@@ -14,7 +14,14 @@
             <FluentSelect Label="Theme"
                           Width="250px"
                           Items="@(Enum.GetValues<DesignThemeModes>())"
-                          @bind-SelectedOption="@Mode" />
+                          @bind-SelectedOption="@Mode">
+                <OptionTemplate>
+                    <FluentStack>
+                        <div>&nbsp;</div>
+                        <FluentLabel>@context</FluentLabel>
+                    </FluentStack>
+                </OptionTemplate>
+            </FluentSelect>
         </FluentGridItem>
 
         <FluentGridItem>
@@ -25,6 +32,7 @@
                           @bind-SelectedOption="@OfficeColor">
                 <OptionTemplate>
                     <FluentStack>
+                        <div>&nbsp;</div>
                         <FluentIcon Value="@(new Icons.Filled.Size20.RectangleLandscape())"
                                     Color="Color.Custom"
                                     CustomColor="@(@context.ToAttributeValue() != "default" ? context.ToAttributeValue() : "#036ac4" )" />

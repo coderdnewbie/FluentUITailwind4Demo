@@ -975,6 +975,9 @@
   .border-x-\(--pattern-fg\) {
     border-inline-color: var(--pattern-fg);
   }
+  .bg-\(--neutral-layer-1\) {
+    background-color: var(--neutral-layer-1);
+  }
   .bg-\(--pattern-fg\) {
     background-color: var(--pattern-fg);
   }

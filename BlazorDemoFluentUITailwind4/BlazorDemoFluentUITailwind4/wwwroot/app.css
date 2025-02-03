@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 @source "../../BlazorDemoFluentUITailwind4.Client";
 
 h6, h5, h4, h3, h2, h1 {

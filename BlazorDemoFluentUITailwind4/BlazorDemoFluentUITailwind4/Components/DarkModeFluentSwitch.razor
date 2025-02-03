@@ -1,0 +1,49 @@
+﻿<style>
+    fluent-switch.darkModeSwitch {
+        --neutral-foreground-rest: var(--fill-strong-focus);
+    }
+</style>
+
+<FluentDesignTheme @bind-Mode="@Mode"
+                   @bind-OfficeColor="@OfficeColor"
+                   OnLoaded="@OnLoaded"    
+                   OnLuminanceChanged="@OnLuminanceChanged"
+                   StorageName="theme" />
+
+<FluentSwitch Label="Theme"
+              UncheckedMessage="&nbsp; Light"
+              CheckedMessage="&nbsp; Dark"
+              Class="darkModeSwitch"
+              @bind-Value="@IsDark" />
+
+@code {
+
+    [CascadingParameter]
+    public MainLayout mainLayout { get; set; } = default!;
+
+    public DesignThemeModes Mode { get; set; }
+
+    public OfficeColor? OfficeColor { get; set; }
+
+    private bool _isDark = false;
+
+    void OnLoaded(LoadedEventArgs e)
+    {
+        IsDark = e.IsDark;
+    }
+
+    void OnLuminanceChanged(LuminanceChangedEventArgs e)
+    {
+        mainLayout.UpdateDarkMode(e.IsDark);
+    }
+
+    public bool IsDark
+    {
+        get => _isDark = (Mode == DesignThemeModes.Dark) ? true : false;
+        set
+        {
+            _isDark = value;
+            Mode = _isDark ? DesignThemeModes.Dark : DesignThemeModes.Light;
+        }
+    }
+}

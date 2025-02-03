@@ -1026,11 +1026,20 @@
   .bg-fixed {
     background-attachment: fixed;
   }
+  .fill-black {
+    fill: var(--color-black);
+  }
   .fill-current {
     fill: currentColor;
   }
+  .fill-sky-400 {
+    fill: var(--color-sky-400);
+  }
   .fill-sky-400\/25 {
     fill: color-mix(in oklab, var(--color-sky-400) 25%, transparent);
+  }
+  .fill-white {
+    fill: var(--color-white);
   }
   .stroke-sky-400\/25 {
     stroke: color-mix(in oklab, var(--color-sky-400) 25%, transparent);

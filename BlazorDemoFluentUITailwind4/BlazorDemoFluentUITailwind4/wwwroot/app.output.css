@@ -1618,6 +1618,11 @@
       color: var(--color-white);
     }
   }
+  .dark\:shadow-gray-200\/25 {
+    &:where(.dark, .dark *) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-gray-200) 25%, transparent);
+    }
+  }
   .dark\:shadow-gray-600 {
     &:where(.dark, .dark *) {
       --tw-shadow-color: var(--color-gray-600);

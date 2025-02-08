@@ -46,3 +46,35 @@ h6 {
     -ms-user-select: none;
     user-select: none;
 }
+
+.aj-animate-slide-down {
+    animation: slide-down 1s;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+.aj-animate-slide-in-left {
+    animation: slide-in-left 1s;
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}

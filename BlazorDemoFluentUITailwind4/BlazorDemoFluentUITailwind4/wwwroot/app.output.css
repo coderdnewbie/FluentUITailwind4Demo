@@ -368,6 +368,7 @@
     --default-mono-font-family: var(--font-mono);
     --default-mono-font-feature-settings: var(--font-mono--font-feature-settings);
     --default-mono-font-variation-settings: var(--font-mono--font-variation-settings);
+    --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
   }
 }
 @layer base {
@@ -800,6 +801,9 @@
   }
   .shrink-0 {
     flex-shrink: 0;
+  }
+  .animate-fade-in-scale {
+    animation: var(--animate-fade-in-scale);
   }
   .list-inside {
     list-style-position: inside;
@@ -1734,6 +1738,16 @@ h6 {
   50% {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+@keyframes fade-in-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 @property --tw-space-y-reverse {

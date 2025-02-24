@@ -2,6 +2,22 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @source "../../BlazorDemoFluentUITailwind4.Client";
 
+@theme {
+    --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
+
+    @keyframes fade-in-scale {
+        0% {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
 h6, h5, h4, h3, h2, h1 {
     margin-top: 0;
     margin-bottom: 0.75rem;

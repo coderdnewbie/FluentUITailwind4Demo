@@ -369,6 +369,8 @@
     --default-mono-font-feature-settings: var(--font-mono--font-feature-settings);
     --default-mono-font-variation-settings: var(--font-mono--font-variation-settings);
     --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
+    --animate-slide-down: slide-down 1s;
+    --animate-slide-in-left: slide-in-left 1s;
   }
 }
 @layer base {
@@ -805,6 +807,9 @@
   .animate-fade-in-scale {
     animation: var(--animate-fade-in-scale);
   }
+  .animate-slide-down {
+    animation: var(--animate-slide-down);
+  }
   .list-inside {
     list-style-position: inside;
   }
@@ -1168,6 +1173,10 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
   .text-base {
     font-size: var(--text-base);
@@ -1748,6 +1757,26 @@ h6 {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0rem);
   }
 }
 @property --tw-space-y-reverse {

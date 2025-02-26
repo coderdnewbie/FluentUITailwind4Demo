@@ -16,6 +16,34 @@
             transform: scale(1);
         }
     }
+
+    --animate-slide-down: slide-down 1s;
+
+    @keyframes slide-down {
+        from {
+            opacity: 0;
+            transform: translateY(-2rem);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0rem);
+        }
+    }
+
+    --animate-slide-in-left: slide-in-left 1s;
+
+    @keyframes slide-in-left {
+        from {
+            opacity: 0;
+            transform: translateX(1rem);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0rem);
+        }
+    }
 }
 
 h6, h5, h4, h3, h2, h1 {

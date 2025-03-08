@@ -13,14 +13,18 @@
 
 <p></p>
 
-<button class="border-transparent bg-pink-500 px-4 py-2 text-white rounded-sm hover:bg-pink-800 focus:outline-hidden focus:ring-2 focus:ring-pink-400" @onclick="IncrementCount">Tailwind Click me</button>
+<button class="rounded-sm border-transparent bg-pink-500 px-4 py-2 text-white hover:bg-pink-800 focus:outline-hidden focus:ring-2 focus:ring-pink-400" @onclick="IncrementCount">Tailwind Click me</button>
+
+<p></p>
+
+<button class="bg-fluent-ui text-fluent-text rounded-sm border-transparent px-4 py-2 hover:bg-fluent-hover/90 hover:outline-none hover:ring-fluent-hover focus:ring-4 focus:outline-none focus:ring-fluent-focus" @onclick="IncrementCount">Tailwind css Click me</button>
 
 <p></p>
 
 <div class="mt-4">
     <div class="group relative inline-flex">
-        <div class="-inset-px group-hover:-inset-1 group-hover:opacity-100 group-hover:duration-200 absolute rounded-xl opacity-70 blur transition-all duration-1000" style="background: linear-gradient(90deg, #44ff9a -0.55%, #44b0ff 22.86%, #8b44ff 48.36%, #ff6644 73.33%, #ebff70 99.34%)"></div>
-        <button type="button" class="border-transparent unselectable bg-green-700 py-2 px-4 text-white relative inline-flex rounded-xl border text-base font-semibold transition-all duration-200 focus:outline-hidden focus:ring-2 focus:ring-green-400" @onclick="IncrementCount">Tailwind Click me</button>
+        <div class="absolute -inset-px rounded-xl opacity-70 blur transition-all duration-1000 group-hover:-inset-1 group-hover:opacity-100 group-hover:duration-200" style="background: linear-gradient(90deg, #44ff9a -0.55%, #44b0ff 22.86%, #8b44ff 48.36%, #ff6644 73.33%, #ebff70 99.34%)"></div>
+        <button type="button" class="unselectable relative inline-flex rounded-xl border border-transparent bg-green-700 px-4 py-2 text-base font-semibold text-white transition-all duration-200 focus:outline-hidden focus:ring-2 focus:ring-green-400" @onclick="IncrementCount">Tailwind Click me</button>
     </div>
 </div>
 

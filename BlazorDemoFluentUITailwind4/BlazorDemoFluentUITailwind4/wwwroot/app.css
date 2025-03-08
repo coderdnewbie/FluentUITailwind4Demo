@@ -3,6 +3,11 @@
 @source "../../BlazorDemoFluentUITailwind4.Client";
 
 @theme {
+    --color-fluent-ui: var(--accent-fill-rest);
+    --color-fluent-focus: var(--accent-fill-focus);
+    --color-fluent-hover: var(--accent-fill-hover);
+    --color-fluent-text: var(--foreground-on-accent-rest);
+
     --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
 
     @keyframes fade-in-scale {

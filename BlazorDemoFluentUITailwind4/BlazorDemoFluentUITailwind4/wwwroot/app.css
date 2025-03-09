@@ -95,3 +95,19 @@ h6 {
     -ms-user-select: none;
     user-select: none;
 }
+
+/* Ensure all the flags are the same size, and centered */
+.flag {
+    height: 1rem;
+    margin-top: 4px;
+    border: 1px solid var(--neutral-layer-3);
+}
+
+.search-box {
+    min-width: 250px;
+    width: 100%;
+}
+
+    .search-box fluent-search {
+        width: 100%;
+    }

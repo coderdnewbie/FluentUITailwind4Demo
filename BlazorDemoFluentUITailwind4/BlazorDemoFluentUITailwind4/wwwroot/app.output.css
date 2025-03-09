@@ -239,6 +239,9 @@
   }
 }
 @layer utilities {
+  .visible {
+    visibility: visible;
+  }
   .absolute {
     position: absolute;
   }
@@ -313,6 +316,30 @@
   }
   .row-start-4 {
     grid-row-start: 4;
+  }
+  .m-26 {
+    margin: calc(var(--spacing) * 26);
+  }
+  .m-32 {
+    margin: calc(var(--spacing) * 32);
+  }
+  .m-40 {
+    margin: calc(var(--spacing) * 40);
+  }
+  .m-64 {
+    margin: calc(var(--spacing) * 64);
+  }
+  .m-101 {
+    margin: calc(var(--spacing) * 101);
+  }
+  .m-104\.5 {
+    margin: calc(var(--spacing) * 104.5);
+  }
+  .m-178 {
+    margin: calc(var(--spacing) * 178);
+  }
+  .m-246 {
+    margin: calc(var(--spacing) * 246);
   }
   .mx-4 {
     margin-inline: calc(var(--spacing) * 4);
@@ -1550,6 +1577,18 @@ h6 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.flag {
+  height: 1rem;
+  margin-top: 4px;
+  border: 1px solid var(--neutral-layer-3);
+}
+.search-box {
+  min-width: 250px;
+  width: 100%;
+}
+.search-box fluent-search {
+  width: 100%;
 }
 @property --tw-rotate-x {
   syntax: "*";

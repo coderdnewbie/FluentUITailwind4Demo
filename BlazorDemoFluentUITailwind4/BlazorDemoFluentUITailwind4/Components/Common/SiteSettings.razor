@@ -1,0 +1,53 @@
+﻿@implements IDisposable
+@inject IDialogService DialogService
+@rendermode InteractiveServer
+
+@namespace DemoPortal.Components.Common
+
+<FluentButton BackgroundColor="var(--accent-fill-stealth)" OnClick="OpenSiteSettingsCenterAsync" Title="Site Settings">
+    @SiteSettingsIcon()
+</FluentButton>
+
+@code {
+    private IDialogReference? _dialog;
+
+    private RenderFragment SiteSettingsIcon() =>
+        @<FluentIcon Value="@(new Icons.Regular.Size20.Settings())" Color="Color.Lightweight" Title="Site settings" />;
+
+    private async Task OpenSiteSettingsCenterAsync()
+    {
+        //ConsoleLogger.WriteLine($"Open Site Settings");
+
+        _dialog = await DialogService.ShowPanelAsync<SiteSettingsPanel>(new DialogParameters<GlobalState>()
+            {
+                Alignment = HorizontalAlignment.Right,
+                Title = $"Site Settings",
+                PrimaryAction = null,
+                SecondaryAction = null,
+                ShowDismiss = true
+            });
+        DialogResult result = await _dialog.Result;
+        HandlePanel(result);
+    }
+
+    private static void HandlePanel(DialogResult result)
+    {
+        if (result.Cancelled)
+        {
+            //ConsoleLogger.WriteLine($"Site Settings dismissed");
+            return;
+        }
+
+        if (result.Data is not null)
+        {
+            //ConsoleLogger.WriteLine($"Site Settings closed");
+            return;
+        }
+    }
+
+    public void Dispose()
+    {
+        //MessageService.OnMessageItemsUpdated -= UpdateCount;
+    }
+
+}

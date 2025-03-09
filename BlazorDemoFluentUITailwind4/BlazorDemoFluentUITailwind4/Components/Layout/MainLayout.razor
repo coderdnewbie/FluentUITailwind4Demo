@@ -1,4 +1,5 @@
-﻿@inherits LayoutComponentBase
+﻿@using DemoPortal.Components.Common
+@inherits LayoutComponentBase
 
 <FluentDesignTheme @bind-Mode="@Mode"
 @bind-OfficeColor="@OfficeColor"
@@ -8,9 +9,28 @@ StorageName="theme" />
 <CascadingValue Value="this">
     <FluentLayout Class="@isDarkText">
         <FluentHeader>
-            FluentUI With Tailwind4
+            Portal
             <FluentSpacer />
-            <DarkModeFluentSwitch @rendermode="InteractiveServer" />
+            <FluentStack HorizontalAlignment="@HorizontalAlignment.End"
+                         VerticalAlignment="@VerticalAlignment.Center"
+                         Style="height: 48px; padding-inline-end: 10px; ">                
+                <DarkModeFluentSwitch @rendermode="InteractiveServer" />
+                <SiteSettings />
+                <div>
+                    <FluentLabel Style="font-size: 11px; line-height: 14px;" Color="Color.Lightweight">Random Dude</FluentLabel>
+                    <FluentLabel Style="font-size: 11px; line-height: 14px;" Color="Color.Lightweight">Company</FluentLabel>
+                </div>
+                <FluentProfileMenu Image="https://randomuser.me/api/portraits/men/44.jpg"
+                                   Status="@PresenceStatus.Available"
+                                   HeaderLabel="Company"
+                                   Initials="RD"
+                                   FullName="Random Dude"
+                                   EMail="random.dude@company.com"
+                                   PopoverStyle="min-width: 330px;"
+                                   Style="width: 48px; height: 48px"
+                                   @rendermode="InteractiveServer" />
+            </FluentStack>
+            <div style="margin: 6px; padding: 6px; min-width: 12px;"></div>
         </FluentHeader>
         <FluentStack Class="main" Orientation="Orientation.Horizontal" Width="100%">
             <NavMenu />
@@ -26,12 +46,15 @@ StorageName="theme" />
             <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor" target="_blank">About Blazor</a>
         </FluentFooter>
     </FluentLayout>
+    <FluentDialogProvider @rendermode="RenderMode.InteractiveServer" />
+    <FluentToastProvider @rendermode="RenderMode.InteractiveServer" />
+    <FluentMenuProvider @rendermode="RenderMode.InteractiveServer" />
 </CascadingValue>
 
 <div id="blazor-error-ui" data-nosnippet>
     An unhandled error has occurred.
     <a href="." class="reload">Reload</a>
-    <span class="dismiss">🗙</span>
+    <span type="button" class="dismiss">🗙</span>
 </div>
 
 @code

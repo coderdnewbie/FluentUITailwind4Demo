@@ -1,33 +1,33 @@
 <Project>
-    <PropertyGroup>
-        <TailwindToolsVersion Condition="'$(TailwindToolsVersion)' == ''">4.0.12</TailwindToolsVersion>
-    </PropertyGroup>
+	<PropertyGroup>
+		<TailwindToolsVersion Condition="'$(TailwindToolsVersion)' == ''">2.0.0</TailwindToolsVersion>
+	</PropertyGroup>
 
-    <Target Name="TailwindBuild" BeforeTargets="CoreBuild" DependsOnTargets="GetTailwindInputs; AcquireTailwindTooling"
+	<Target Name="TailwindBuild" BeforeTargets="CoreBuild" DependsOnTargets="GetTailwindInputs; AcquireTailwindTooling"
             Inputs="@(TailwindFileInputs)" Outputs="$(TailwindCssOutput)">
-        <Exec Command="$(TailwindExePath) -i $(TailwindCssInput) -o $(TailwindCssOutput)" />
-        <Touch Files="$(TailwindCssOutput)" />
-        <ItemGroup>
-            <FileWrites Include="$(TailwindCssOutput)" />
-        </ItemGroup>
-    </Target>
+		<Exec Command="$(TailwindExePath) -i $(TailwindCssInput) -o $(TailwindCssOutput)" />
+		<Touch Files="$(TailwindCssOutput)" />
+		<ItemGroup>
+			<FileWrites Include="$(TailwindCssOutput)" />
+		</ItemGroup>
+	</Target>
 
-    <Target Name="AcquireTailwindTooling" DependsOnTargets="GetTailwindInputs" Condition="!Exists('$(TailwindExePath)')">
-        <DownloadFile SourceUrl="https://github.com/tailwindlabs/tailwindcss/releases/download/v$(TailwindToolsVersion)/$(TailwindExeName)" DestinationFolder="$(TailwindExeDir)" />
-        <Exec Condition="!$([MSBuild]::IsOSPlatform('Windows'))" Command="chmod +x '$(TailwindExePath)'" />
-    </Target>
-    
-    <Target Name="GetTailwindInputs">
-        <PropertyGroup>
-            <TailwindExeName Condition="$([MSBuild]::IsOSPlatform('Windows'))">tailwindcss-windows-x64.exe</TailwindExeName>
-            <TailwindExeName Condition="$([MSBuild]::IsOSPlatform('Linux'))">tailwindcss-linux-x64</TailwindExeName>
-            <TailwindExeName Condition="$([MSBuild]::IsOSPlatform('OSX'))">tailwindcss-macos-x64</TailwindExeName>
-            <TailwindExeDir>$([System.IO.Path]::Combine("node_modules", $(TailwindToolsVersion)))</TailwindExeDir>
-            <TailwindExePath>$([System.IO.Path]::Combine($(TailwindExeDir), $(TailwindExeName)))</TailwindExePath>
-        </PropertyGroup>		
-        <ItemGroup>			
-            <TailwindFileInputs Include="$(MSBuildProjectDirectory)\**\*.css;$(MSBuildProjectDirectory)\**\*.razor;$(MSBuildProjectDirectory)\**\*.cshtml" />
-            <UpToDateCheckInput Include="@(TailwindFileInputs)" />
-        </ItemGroup>
-    </Target>
+	<Target Name="AcquireTailwindTooling" DependsOnTargets="GetTailwindInputs" Condition="!Exists('$(TailwindExePath)')">
+		<DownloadFile SourceUrl="https://github.com/dobicinaitis/tailwind-cli-extra/releases/download/v$(TailwindToolsVersion)/$(TailwindExeName)" DestinationFolder="$(TailwindExeDir)" />
+		<Exec Condition="!$([MSBuild]::IsOSPlatform('Windows'))" Command="chmod +x '$(TailwindExePath)'" />
+	</Target>
+
+	<Target Name="GetTailwindInputs">
+		<PropertyGroup>
+			<TailwindExeName Condition="$([MSBuild]::IsOSPlatform('Windows'))">tailwindcss-extra-windows-x64.exe</TailwindExeName>
+			<TailwindExeName Condition="$([MSBuild]::IsOSPlatform('Linux'))">tailwindcss-extra-linux-x64</TailwindExeName>
+			<TailwindExeName Condition="$([MSBuild]::IsOSPlatform('OSX'))">tailwindcss-extra-macos-x64</TailwindExeName>
+			<TailwindExeDir>$([System.IO.Path]::Combine("node_modules", $(TailwindToolsVersion)))</TailwindExeDir>
+			<TailwindExePath>$([System.IO.Path]::Combine($(TailwindExeDir), $(TailwindExeName)))</TailwindExePath>
+		</PropertyGroup>
+		<ItemGroup>
+			<TailwindFileInputs Include="$(MSBuildProjectDirectory)**\*.css;$(MSBuildProjectDirectory)**\*.razor;$(MSBuildProjectDirectory)**\*.cshtml" />
+			<UpToDateCheckInput Include="@(TailwindFileInputs)" />
+		</ItemGroup>
+	</Target>
 </Project>

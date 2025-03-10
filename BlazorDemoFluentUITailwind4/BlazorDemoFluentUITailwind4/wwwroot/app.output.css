@@ -949,6 +949,12 @@
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
   }
+  .carousel-item {
+    box-sizing: content-box;
+    display: flex;
+    flex: none;
+    scroll-snap-align: start;
+  }
   .status {
     display: inline-block;
     aspect-ratio: 1 / 1;
@@ -962,6 +968,16 @@
     color: color-mix(in oklab, var(--color-black) 30%, transparent);
     background-image: radial-gradient( circle at 35% 30%, oklch(1 0 0 / calc(var(--depth) * 0.5)), #0000 );
     box-shadow: 0 2px 3px -1px color-mix(in oklab, currentColor calc(var(--depth) * 100%), #0000);
+  }
+  .carousel {
+    display: inline-flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   .line-clamp-3 {
     overflow: hidden;
@@ -1440,6 +1456,11 @@
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .btn-xs {
+    font-size: 0.6875rem;
+    --btn-p: 0.5rem;
+    --size: calc(var(--size-field, 0.25rem) * 6);
   }
   .leading-5 {
     --tw-leading: calc(var(--spacing) * 5);

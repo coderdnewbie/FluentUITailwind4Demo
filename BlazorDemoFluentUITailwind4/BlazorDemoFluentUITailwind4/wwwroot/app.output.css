@@ -2521,7 +2521,7 @@ h6 {
       --root-bg: color-mix(in srgb, var(--color-base-100), oklch(0% 0 0) 40%);
     }
   }
-  :where(.modal) {
+  :where(.modal-top, .modal-bottom) {
     scrollbar-gutter: stable both-edges;
   }
 }

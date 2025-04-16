@@ -462,6 +462,7 @@
     &:focus-visible {
       outline-width: 2px;
       outline-style: solid;
+      isolation: isolate;
     }
     &:active:not(.btn-active) {
       translate: 0 0.5px;

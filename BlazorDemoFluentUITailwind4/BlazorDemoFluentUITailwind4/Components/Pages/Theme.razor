@@ -46,10 +46,11 @@ StorageName="theme" />
 
     @* note: need the divs so that the buttons dont merge into each other *@
 
-    <FluentStack Style="max-width: 500px; margin: 12px 0px; padding: 12px; border: 1px solid var(--accent-fill-rest);">
+    <FluentStack Style="max-width: 640px; margin: 12px 0px; padding: 12px; border: 1px solid var(--accent-fill-rest);">
         <div class="mt-1.5"><FluentIcon Value="@(new Icons.Regular.Size24.Airplane())" /></div>
         <div class="mt-1.5"><FluentLabel>Test content</FluentLabel></div>
         <div><span>&nbsp;&nbsp;</span></div>
+        <div><FluentButton IconStart="@(new Icons.Regular.Size16.Globe())" Appearance="Appearance.Accent"> Accent Btn </FluentButton></div>
         <div><FluentButton Appearance="Appearance.Lightweight">Lightweight btn</FluentButton></div>
         <div><FluentButton Appearance="Appearance.Outline">Outline btn</FluentButton></div>
         <div><FluentButton Appearance="Appearance.Accent">Accent btn</FluentButton></div>

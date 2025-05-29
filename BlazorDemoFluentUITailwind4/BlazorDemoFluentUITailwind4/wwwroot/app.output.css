@@ -746,6 +746,7 @@
       border: var(--border) solid var(--input-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
     }
     position: relative;
+    display: inline-block;
     flex-shrink: 0;
     cursor: pointer;
     appearance: none;
@@ -819,6 +820,7 @@
   }
   .radio {
     position: relative;
+    display: inline-block;
     flex-shrink: 0;
     cursor: pointer;
     appearance: none;

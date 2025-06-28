@@ -26,9 +26,9 @@
             </div>
         </FluentGridItem>
 
-        <FluentGridItem xs="12" sm="12" md="12">            
-            <p class="text-xl leading-normal lg:text-xl xl:text-xl">                
-                More content starts here and will span to the width of the page which allows full flexibility in this demonstration. 
+        <FluentGridItem xs="12" sm="12" md="12">
+            <p class="text-xl leading-normal lg:text-xl xl:text-xl">
+                More content starts here and will span to the width of the page which allows full flexibility in this demonstration.
             </p>
         </FluentGridItem>
     </FluentGrid>
@@ -59,4 +59,33 @@
     <a href="#item2" class="btn btn-xs">2</a>
     <a href="#item3" class="btn btn-xs">3</a>
     <a href="#item4" class="btn btn-xs">4</a>
+</div>
+
+<div class="mb-2">&nbsp;</div>
+
+@* <div class="grid grid-cols-12">  This is equivalent of row using CSS grid*@
+<div class="grid grid-cols-12 gap-2">
+    <div class="col-span-12 rounded-md bg-pink-600 p-4 sm:col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-3 2xl:col-span-3">Column</div>
+    <div class="col-span-12 rounded-md bg-pink-400 p-4 sm:col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-3 2xl:col-span-3">Column</div>
+    <div class="col-span-12 rounded-md bg-pink-300 p-4 sm:col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-3 2xl:col-span-3">Column</div>
+    <div class="col-span-12 rounded-md bg-pink-200 p-4 sm:col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-3 2xl:col-span-3">Column</div>
+</div>
+
+
+<div class="mb-2">&nbsp;</div>
+
+
+<div class="grid grid-cols-12 gap-2">
+    <div class="col-span-12 rounded-md bg-blue-300 p-4 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6">
+        <div class="grid grid-cols-12 gap-2">
+            <div class="col-span-12 rounded-md bg-pink-400 p-4 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4">Column</div>
+            <div class="col-span-12 rounded-md bg-pink-300 p-4 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4">Column</div>
+            <div class="col-span-12 rounded-md bg-pink-200 p-4 sm:col-span-12 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4">Column</div>
+        </div>
+    </div>
+    <div class="col-span-12 rounded-md bg-blue-300 p-4 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6">
+        <div class="grid grid-cols-12 gap-2">
+            <div class="col-span-12 rounded-md bg-pink-600 p-4">Column</div>
+        </div>
+    </div>
 </div>

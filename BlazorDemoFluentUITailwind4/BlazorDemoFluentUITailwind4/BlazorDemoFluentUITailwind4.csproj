@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorDemoFluentUITailwind4.Client\BlazorDemoFluentUITailwind4.Client.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.7" />
   </ItemGroup>
 
   <ItemGroup>

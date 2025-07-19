@@ -89,3 +89,34 @@
         </div>
     </div>
 </div>
+
+<!-- Componente de tarjeta con efecto de esquinas redondeadas -->
+<div class="relative mx-auto mt-16 h-85 w-full max-w-3xl overflow-hidden rounded-3xl bg-cover bg-center" style="background-image: url('https://i.ibb.co/HLZs1d4V/Tranquil-Japanese-Temple-Reflection.png');">
+    <!-- Contenedor del div blanco y elementos laterales -->
+    <div class="absolute right-0 bottom-0 left-0 flex items-end justify-center space-y-0">
+        <!-- Cuadro rojo izquierdo con esquina cortada -->
+        <div class="h-10 w-10 bg-white" style="mask: radial-gradient(circle at top left, transparent 39px, transparent 40px, white 41px);"></div>
+        <!-- Div central blanco con contenido -->
+        <div class="max-w-md flex-1 justify-center rounded-t-3xl bg-white px-6 pt-5 text-center">
+            <!-- Contenido -->
+            <h2 class="mb-2 text-xl font-bold text-gray-900">Discover the Magic of Japan.</h2>
+            <p class="mb-4 text-sm leading-relaxed text-gray-600">From ancient temples to neon-lit cities — experience the perfect blend of tradition and technology.</p>
+            <!-- Botones -->
+            <div class="mb-3 flex justify-center gap-3">
+                <button class="rounded-full bg-yellow-500 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-yellow-600">Explore tour</button>
+                <button class="rounded-full border bg-gray-100 px-5 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-200">Start Enquiry</button>
+            </div>
+            <!-- Indicadores -->
+            <div class="flex justify-center space-x-1">
+                <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+                <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+                <div class="h-2 w-2 rounded-full bg-red-500"></div>
+                <div class="h-2 w-2 rounded-full bg-gray-300"></div>
+            </div>
+        </div>
+        <!-- Cuadro rojo derecho con esquina cortada -->
+        <div class="h-10 w-10 bg-white" style="mask: radial-gradient(circle at top right, transparent 39px, transparent 40px, white 41px);"></div>
+    </div>
+</div>
+
+<div>&nbsp;</div>

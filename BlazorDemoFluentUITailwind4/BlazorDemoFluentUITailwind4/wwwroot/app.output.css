@@ -2387,14 +2387,14 @@
       border-color: var(--color-gray-800);
     }
   }
+  .dark\:bg-\(--neutral-layer-1\) {
+    &:where(.dark, .dark *) {
+      background-color: var(--neutral-layer-1);
+    }
+  }
   .dark\:bg-\[\#1a1a1a\] {
     &:where(.dark, .dark *) {
       background-color: #1a1a1a;
-    }
-  }
-  .dark\:bg-\[\#272727\] {
-    &:where(.dark, .dark *) {
-      background-color: #272727;
     }
   }
   .dark\:bg-blue-800 {

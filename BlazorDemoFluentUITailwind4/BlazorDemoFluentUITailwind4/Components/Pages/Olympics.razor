@@ -71,7 +71,7 @@
         .ThenDescending(x => x.Medals.Silver)
         .ThenDescending(x => x.Medals.Bronze);
 
-    Func<Country, string?> rowClass = x => x.Name.StartsWith("A") ? "highlighted" : null;
+    Func<Country, string?> rowClass = x => x.Name.StartsWith("N") ? "highlighted-row" : null;
     Func<Country, string?> rowStyle = x => x.Name.StartsWith("Au") ? "background-color: var(--accent-fill-rest); color: var(--fill-color);" : null;
 
     //IQueryable<Country>? FilteredItems => items?.Where(x => x.Name.Contains(nameFilter, StringComparison.CurrentCultureIgnoreCase));

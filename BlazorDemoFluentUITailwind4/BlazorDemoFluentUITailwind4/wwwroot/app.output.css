@@ -2392,6 +2392,11 @@
       background-color: #1a1a1a;
     }
   }
+  .dark\:bg-\[\#272727\] {
+    &:where(.dark, .dark *) {
+      background-color: #272727;
+    }
+  }
   .dark\:bg-blue-800 {
     &:where(.dark, .dark *) {
       background-color: var(--color-blue-800);

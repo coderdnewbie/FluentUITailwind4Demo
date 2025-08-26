@@ -2143,6 +2143,13 @@
       }
     }
   }
+  .hover\:text-gray-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-600);
+      }
+    }
+  }
   .hover\:decoration-2 {
     &:hover {
       @media (hover: hover) {
@@ -2399,9 +2406,9 @@
       background-color: var(--neutral-layer-1);
     }
   }
-  .dark\:bg-\[\#1a1a1a\] {
+  .dark\:bg-\[\#333333\] {
     &:where(.dark, .dark *) {
-      background-color: #1a1a1a;
+      background-color: #333333;
     }
   }
   .dark\:bg-blue-800 {

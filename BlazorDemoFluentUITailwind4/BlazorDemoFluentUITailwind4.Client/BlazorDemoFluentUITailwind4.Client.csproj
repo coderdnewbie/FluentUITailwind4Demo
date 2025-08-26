@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentUI.Blazor.Community.Components" Version="0.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.8" />
     <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.12.1" />
     <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.12.1" />

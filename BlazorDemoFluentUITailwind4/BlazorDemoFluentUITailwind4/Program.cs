@@ -1,4 +1,5 @@
 using BlazorDemoFluentUITailwind4.Components;
+using FluentUI.Blazor.Community.Extensions;
 using Microsoft.FluentUI.AspNetCore.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 builder.Services.AddFluentUIComponents();
+builder.Services.AddFluentCxUIComponents();
 
 var app = builder.Build();
 

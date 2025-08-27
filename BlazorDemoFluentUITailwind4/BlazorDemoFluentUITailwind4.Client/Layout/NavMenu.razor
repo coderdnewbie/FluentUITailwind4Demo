@@ -1,10 +1,10 @@
-﻿@rendermode InteractiveAuto
+﻿@rendermode InteractiveServer
 
 <div class="navmenu">
     <input type="checkbox" title="Menu expand/collapse toggle" id="navmenu-toggle" class="navmenu-icon" />
     <label for="navmenu-toggle" class="navmenu-icon"><FluentIcon Value="@(new Icons.Regular.Size20.Navigation())" Color="Color.Fill" /></label>
     <nav class="sitenav" aria-labelledby="main-menu">
-        <FluentNavMenu Id="main-menu" Width="250" Collapsible="true" Title="Navigation menu" @bind-Expanded="expanded" CustomToggle="true">
+        <FluentNavMenu Id="main-menu" Width="250" Collapsible="true" CollapsedChildNavigation="true" Title="Navigation menu" @bind-Expanded="expanded" CustomToggle="true">
             <FluentNavLink Href="/" Match="NavLinkMatch.All" Icon="@(new Icons.Regular.Size20.Home())" IconColor="Color.Accent">Home</FluentNavLink>
             <FluentNavLink Href="theme" Icon="@(new Icons.Regular.Size20.WalkieTalkie())" IconColor="Color.Accent">Theme</FluentNavLink>
             <FluentNavLink Href="counter" Icon="@(new Icons.Regular.Size20.NumberSymbolSquare())" IconColor="Color.Accent">Counter</FluentNavLink>

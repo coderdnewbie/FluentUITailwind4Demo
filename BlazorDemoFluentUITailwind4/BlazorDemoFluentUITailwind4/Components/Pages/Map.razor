@@ -1,0 +1,48 @@
+﻿@inject IJSRuntime JSRuntime
+@implements IAsyncDisposable
+@page "/map"
+@rendermode InteractiveServer
+
+<PageTitle>Map Demo</PageTitle>
+
+<h3>Map Demo using Leaflet Clusters and Google Maps</h3>
+
+<br />
+
+<div id="map" style="width:600px; height:400px;"></div>
+
+
+@code {
+
+    private IJSObjectReference? module;
+    private string? result;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./leafletmap.js");
+            if (module != null)
+            {
+                result = await module.InvokeAsync<string>("load_map");
+            }
+        }
+    }
+
+    async ValueTask IAsyncDisposable.DisposeAsync()
+    {
+        try
+        {
+            if (module is not null)
+            {
+                await module.DisposeAsync();
+            }
+        }
+        catch (JSDisconnectedException ex)
+        {
+            // Handle the disconnection gracefully
+            Console.WriteLine("JavaScript runtime is disconnected: " + ex.Message);
+        }
+    }
+}
+
+

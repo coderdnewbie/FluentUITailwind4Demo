@@ -56,6 +56,17 @@
               CheckedMessage="&nbsp; Restore all results">
 </FluentSwitch>
 
+<hr />
+<br />
+<h4>Tooltip Demo</h4>
+
+<FluentIcon Id="myFirstButton" Icon="Icons.Regular.Size24.Notepad" />
+
+<FluentTooltip Anchor="myFirstButton" OnDismissed="OnDismiss">
+    Hello World <br />
+    It is a <i>small</i> tooltip.
+</FluentTooltip>
+
 @code {
     bool _clearItems = false;
     IQueryable<Country>? items;
@@ -146,6 +157,11 @@
         // However, since this is a standalone docs site, we'll hardcode the data.
         // The API contract would be the same either way.
         return Task.FromResult(_countries);
+    }
+
+    private void OnDismiss()
+    {
+        Console.WriteLine("Tooltip dismissed!");
     }
 
     // Content derived from https://www.kaggle.com/datasets/arjunprasadsarkhel/2021-olympics-in-tokyo,

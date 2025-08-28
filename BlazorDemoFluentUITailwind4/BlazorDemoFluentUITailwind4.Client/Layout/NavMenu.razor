@@ -5,19 +5,19 @@
     <label for="navmenu-toggle" class="navmenu-icon"><FluentIcon Value="@(new Icons.Regular.Size20.Navigation())" Color="Color.Fill" /></label>
     <nav class="sitenav" aria-labelledby="main-menu">
         <FluentNavMenu Id="main-menu" Width="250" Collapsible="true" CollapsedChildNavigation="true" Title="Navigation menu" @bind-Expanded="expanded" CustomToggle="true">
-            <FluentNavLink Href="/" Match="NavLinkMatch.All" Icon="@(new Icons.Regular.Size20.Home())" IconColor="Color.Accent">Home</FluentNavLink>
-            <FluentNavLink Href="theme" Icon="@(new Icons.Regular.Size20.WalkieTalkie())" IconColor="Color.Accent">Theme</FluentNavLink>
-            <FluentNavLink Href="counter" Icon="@(new Icons.Regular.Size20.NumberSymbolSquare())" IconColor="Color.Accent">Counter</FluentNavLink>
-            <FluentNavLink Href="weather" Icon="@(new Icons.Regular.Size20.WeatherPartlyCloudyDay())" IconColor="Color.Accent">Weather</FluentNavLink>
-            <FluentNavLink Href="ideas" Icon="@(new Icons.Regular.Size20.DesignIdeas())" IconColor="Color.Accent">Ideas</FluentNavLink>
-            <FluentNavLink Href="olympics" Icon="@(new Icons.Regular.Size20.Games())" IconColor="Color.Accent">Olympics</FluentNavLink>
-            <FluentNavLink Href="map" Icon="@(new Icons.Regular.Size20.Map())" IconColor="Color.Accent">Leaflet Map</FluentNavLink>
+            <FluentNavLink Href="/" Match="NavLinkMatch.All" Icon="@(new Icons.Regular.Size20.Home())" IconColor="Color.Accent" Tooltip="Home">Home</FluentNavLink>
+            <FluentNavLink Href="theme" Icon="@(new Icons.Regular.Size20.WalkieTalkie())" IconColor="Color.Accent" Tooltip="Theme">Theme</FluentNavLink>
+            <FluentNavLink Href="counter" Icon="@(new Icons.Regular.Size20.NumberSymbolSquare())" IconColor="Color.Accent" Tooltip="Counter">Counter</FluentNavLink>
+            <FluentNavLink Href="weather" Icon="@(new Icons.Regular.Size20.WeatherPartlyCloudyDay())" IconColor="Color.Accent" Tooltip="Weather">Weather</FluentNavLink>
+            <FluentNavLink Href="ideas" Icon="@(new Icons.Regular.Size20.DesignIdeas())" IconColor="Color.Accent" Tooltip="Ideas">Ideas</FluentNavLink>
+            <FluentNavLink Href="olympics" Icon="@(new Icons.Regular.Size20.Games())" IconColor="Color.Accent" Tooltip="Olympics">Olympics</FluentNavLink>
+            <FluentNavLink Href="map" Icon="@(new Icons.Regular.Size20.Map())" IconColor="Color.Accent" Tooltip="Map">Leaflet Map</FluentNavLink>
             <FluentNavGroup Title="Tailwind Group" Expanded="true" Icon="@(new Icons.Regular.Size20.SquareDovetailJoint())">
-                <FluentNavLink Href="tailwindplay" Icon="@(new Icons.Regular.Size20.PlantCattail())" IconColor="Color.Accent">Tailwind Play</FluentNavLink>
-                <FluentNavLink Href="daisyui" Icon="@(new Icons.Regular.Size20.FlowSparkle())" IconColor="Color.Accent">DaisyUI</FluentNavLink>
+                <FluentNavLink Href="tailwindplay" Icon="@(new Icons.Regular.Size20.PlantCattail())" IconColor="Color.Accent" Tooltip="Tailwind Play">Tailwind Play</FluentNavLink>
+                <FluentNavLink Href="daisyui" Icon="@(new Icons.Regular.Size20.FlowSparkle())" IconColor="Color.Accent" Tooltip="DaisyUI">DaisyUI</FluentNavLink>
             </FluentNavGroup>
             <FluentNavGroup Title="Community Group" Icon="@(new Icons.Regular.Size20.SquareDovetailJoint())">
-                <FluentNavLink Href="tilegrid" Icon="@(new Icons.Regular.Size20.GridKanban())" IconColor="Color.Accent">Tilegrid</FluentNavLink>
+                <FluentNavLink Href="tilegrid" Icon="@(new Icons.Regular.Size20.GridKanban())" IconColor="Color.Accent" Tooltip="Tilegrid">Tilegrid</FluentNavLink>
             </FluentNavGroup>
         </FluentNavMenu>
     </nav>

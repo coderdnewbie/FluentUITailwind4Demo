@@ -467,7 +467,7 @@
         }
       }
     }
-    &:focus-visible {
+    &:focus-visible, &:has(:focus-visible) {
       outline-width: 2px;
       outline-style: solid;
       isolation: isolate;
@@ -864,9 +864,11 @@
       outline: 2px solid currentColor;
     }
     &:checked, &[aria-checked="true"] {
-      animation: radio 0.2s ease-out;
       border-color: currentColor;
       background-color: var(--color-base-100);
+      @media (prefers-reduced-motion: no-preference) {
+        animation: radio 0.2s ease-out;
+      }
       &:before {
         background-color: currentColor;
         box-shadow: 0 -1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset, 0 8px 0 -4px oklch(100% 0 0 / calc(var(--depth) * 0.1)) inset, 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1));
@@ -899,12 +901,14 @@
       appearance: none;
     }
     :where(*) {
-      animation: rating 0.25s ease-out;
       height: calc(0.25rem * 6);
       width: calc(0.25rem * 6);
       border-radius: 0;
       background-color: var(--color-base-content);
       opacity: 20%;
+      @media (prefers-reduced-motion: no-preference) {
+        animation: rating 0.25s ease-out;
+      }
       &:is(input) {
         cursor: pointer;
       }
@@ -921,8 +925,10 @@
         opacity: 100%;
       }
       &:focus-visible {
-        transition: scale 0.2s ease-out;
         scale: 1.1;
+        @media (prefers-reduced-motion: no-preference) {
+          transition: scale 0.2s ease-out;
+        }
       }
     }
     & *:active:focus {
@@ -1175,8 +1181,10 @@
     display: inline-flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     scrollbar-width: none;
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
     &::-webkit-scrollbar {
       display: none;
     }

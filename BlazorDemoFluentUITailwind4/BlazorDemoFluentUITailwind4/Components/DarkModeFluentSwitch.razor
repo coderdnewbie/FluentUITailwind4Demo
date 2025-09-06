@@ -8,21 +8,19 @@
 
 <FluentDesignTheme @bind-Mode="@Mode"
                    @bind-OfficeColor="@OfficeColor"
-                   OnLoaded="@OnLoaded"    
-                   OnLuminanceChanged="@OnLuminanceChanged"
+                   OnLoaded="@OnLoaded"
                    StorageName="theme" />
 
-<FluentSwitch Label="Theme"
-              UncheckedMessage="&nbsp; Light"
-              CheckedMessage="&nbsp; Dark"
-              Class="darkModeSwitch"
-              @bind-Value="@IsDark" />
-<div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<FluentButton BackgroundColor="var(--accent-fill-stealth)" OnClick="@SwitchTheme" Title="Theme Settings">
+    @ThemeSettingsIcon()
+</FluentButton>
 
 @code {
 
-    [CascadingParameter]
-    public MainLayout mainLayout { get; set; } = default!;
+    private RenderFragment ThemeSettingsIcon() =>
+        @<FluentIcon Value="@(new Icons.Regular.Size20.DarkTheme())" Color="Color.Lightweight" Title="Theme Mode" />;
+
+    // This control is for developemnt testing purposes due to 'System' features (see onLoaded)
 
     public DesignThemeModes Mode { get; set; }
 
@@ -32,12 +30,8 @@
 
     void OnLoaded(LoadedEventArgs e)
     {
+        // for scenarios where System is turned on ... force theme to light or dark
         IsDark = e.IsDark;
-    }
-
-    void OnLuminanceChanged(LuminanceChangedEventArgs e)
-    {
-        mainLayout.UpdateDarkMode(e.IsDark);
     }
 
     public bool IsDark
@@ -48,5 +42,10 @@
             _isDark = value;
             Mode = _isDark ? DesignThemeModes.Dark : DesignThemeModes.Light;
         }
+    }
+
+    private void SwitchTheme()
+    {
+        Mode = Mode != DesignThemeModes.Dark ? DesignThemeModes.Dark : DesignThemeModes.Light;
     }
 }

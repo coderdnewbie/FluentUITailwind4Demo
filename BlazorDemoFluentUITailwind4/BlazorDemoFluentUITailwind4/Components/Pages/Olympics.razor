@@ -3,62 +3,62 @@
 
 <PageTitle>Olympics Demo</PageTitle>
 
-<div style="height: 380px; overflow-x:auto; display:flex;">
-    <FluentDataGrid Items="@FilteredItems"
-                    ResizableColumns=true
-                    ResizeType="DataGridResizeType.Discrete"
-                    GridTemplateColumns="0.3fr 1fr 0.2fr 0.2fr 0.2fr 0.2fr"
-                    Pagination="@pagination"
-                    RowClass="@rowClass"
-                    RowStyle="@rowStyle"
-                    HeaderCellAsButtonWithMenu="true"
-                    ColumnResizeLabels="@customLabels">
-        <TemplateColumn Tooltip="true" TooltipText="@(c => "Flag of " + c.Name)" Title="Rank" SortBy="@rankSort" Align="Align.Center" InitialSortDirection="SortDirection.Ascending" IsDefaultSortColumn=true>
-            <img class="flag" src="/flags/@(context.Code).svg" alt="Flag of @(context.Code)" />
-        </TemplateColumn>
-        <PropertyColumn Property="@(c => c.Name)" Sortable="true" Filtered="!string.IsNullOrWhiteSpace(nameFilter)" Tooltip="true" Title="Name of the country">
-            <ColumnOptions>
-                <div class="search-box">
-                    <FluentSearch Autofocus=true @bind-Value=nameFilter @oninput="HandleCountryFilter" @bind-Value:after="HandleClear" Placeholder="Country name..." Style="width: 100%;" Label="Filter" />
-                </div>
-            </ColumnOptions>
-        </PropertyColumn>
-        <PropertyColumn Property="@(c => c.Medals.Gold)" Sortable="true" Align="Align.Start" Tooltip="true" TooltipText="@(c => "That is " + c.Medals.Gold + " x GOLD!!")" />
-        <PropertyColumn Property="@(c => c.Medals.Silver)" Sortable="true" Align="Align.Center" Tooltip="true" />
-        <PropertyColumn Property="@(c => c.Medals.Bronze)" Sortable="false" Align="Align.End" />
-        <PropertyColumn Property="@(c => c.Medals.Total)" Sortable="true" Filtered="@(minMedals != 0 || maxMedals != 130)" Align="Align.End" Tooltip="true">
-            <ColumnOptions>
-                <div style="width: 100%; height: 150px;">
-                    <FluentSlider Label="@($"Min ({minMedals})")" Min="0" Max="150" Step="1" Orientation="Orientation.Horizontal" @bind-Value=minMedals Immediate="true" Style="width: 100%;">
-                        <FluentSliderLabel Position="0">0</FluentSliderLabel>
-                        <FluentSliderLabel Position="50">50</FluentSliderLabel>
-                        <FluentSliderLabel Position="100">100</FluentSliderLabel>
-                        <FluentSliderLabel Position="150">150</FluentSliderLabel>
-                    </FluentSlider>
-                    <br /><br />
-                    <FluentSlider Label="@($"Max ({maxMedals})")" Min="0" Max="150" Step="1" Orientation="Orientation.Horizontal" @bind-Value=maxMedals Immediate="true" Style="width: 100%;">
-                        <FluentSliderLabel Position="0">0</FluentSliderLabel>
-                        <FluentSliderLabel Position="50">50</FluentSliderLabel>
-                        <FluentSliderLabel Position="100">100</FluentSliderLabel>
-                        <FluentSliderLabel Position="150">150</FluentSliderLabel>
-                    </FluentSlider>
-                </div>
-            </ColumnOptions>
-        </PropertyColumn>
-    </FluentDataGrid>
-</div>
+<FluentCard Style="height: 490px" Class="mt-4">
+    <div style="overflow-x:auto; display:flex;">
+        <FluentDataGrid Items="@FilteredItems"
+                        ResizableColumns=true
+                        ResizeType="DataGridResizeType.Discrete"
+                        GridTemplateColumns="0.3fr 1fr 0.2fr 0.2fr 0.2fr 0.2fr"
+                        Pagination="@pagination"
+                        RowClass="@rowClass"
+                        RowStyle="@rowStyle"
+                        HeaderCellAsButtonWithMenu="true"
+                        ColumnResizeLabels="@customLabels">
+            <TemplateColumn Tooltip="true" TooltipText="@(c => "Flag of " + c.Name)" Title="Rank" SortBy="@rankSort" Align="Align.Center" InitialSortDirection="SortDirection.Ascending" IsDefaultSortColumn=true>
+                <img class="flag" src="/flags/@(context.Code).svg" alt="Flag of @(context.Code)" />
+            </TemplateColumn>
+            <PropertyColumn Property="@(c => c.Name)" Sortable="true" Filtered="!string.IsNullOrWhiteSpace(nameFilter)" Tooltip="true" Title="Name of the country">
+                <ColumnOptions>
+                    <div class="search-box">
+                        <FluentSearch Autofocus=true @bind-Value=nameFilter @oninput="HandleCountryFilter" @bind-Value:after="HandleClear" Placeholder="Country name..." Style="width: 100%;" Label="Filter" />
+                    </div>
+                </ColumnOptions>
+            </PropertyColumn>
+            <PropertyColumn Property="@(c => c.Medals.Gold)" Sortable="true" Align="Align.Start" Tooltip="true" TooltipText="@(c => "That is " + c.Medals.Gold + " x GOLD!!")" />
+            <PropertyColumn Property="@(c => c.Medals.Silver)" Sortable="true" Align="Align.Center" Tooltip="true" />
+            <PropertyColumn Property="@(c => c.Medals.Bronze)" Sortable="false" Align="Align.End" />
+            <PropertyColumn Property="@(c => c.Medals.Total)" Sortable="true" Filtered="@(minMedals != 0 || maxMedals != 130)" Align="Align.End" Tooltip="true">
+                <ColumnOptions>
+                    <div style="width: 100%; height: 150px;">
+                        <FluentSlider Label="@($"Min ({minMedals})")" Min="0" Max="150" Step="1" Orientation="Orientation.Horizontal" @bind-Value=minMedals Immediate="true" Style="width: 100%;">
+                            <FluentSliderLabel Position="0">0</FluentSliderLabel>
+                            <FluentSliderLabel Position="50">50</FluentSliderLabel>
+                            <FluentSliderLabel Position="100">100</FluentSliderLabel>
+                            <FluentSliderLabel Position="150">150</FluentSliderLabel>
+                        </FluentSlider>
+                        <br /><br />
+                        <FluentSlider Label="@($"Max ({maxMedals})")" Min="0" Max="150" Step="1" Orientation="Orientation.Horizontal" @bind-Value=maxMedals Immediate="true" Style="width: 100%;">
+                            <FluentSliderLabel Position="0">0</FluentSliderLabel>
+                            <FluentSliderLabel Position="50">50</FluentSliderLabel>
+                            <FluentSliderLabel Position="100">100</FluentSliderLabel>
+                            <FluentSliderLabel Position="150">150</FluentSliderLabel>
+                        </FluentSlider>
+                    </div>
+                </ColumnOptions>
+            </PropertyColumn>
+        </FluentDataGrid>
+    </div>
 
-<FluentPaginator State="@pagination" />
+    <FluentPaginator State="@pagination" />
 
-<FluentSwitch @bind-Value="@_clearItems"
-              @bind-Value:after="ToggleItemsAsync"
-              UncheckedMessage="&nbsp; Clear all results"
-              CheckedMessage="&nbsp; Restore all results">
-</FluentSwitch>
+    <FluentSwitch @bind-Value="@_clearItems"
+                  @bind-Value:after="ToggleItemsAsync"
+                  UncheckedMessage="&nbsp; Clear all results"
+                  CheckedMessage="&nbsp; Restore all results">
+    </FluentSwitch>
+</FluentCard>
 
-<hr />
-<br />
-<h4>Tooltip Demo</h4>
+<h4 style="margin-top: 2rem;">Tooltip Demo</h4>
 
 <FluentIcon Id="myFirstButton" Icon="Icons.Regular.Size24.Notepad" />
 

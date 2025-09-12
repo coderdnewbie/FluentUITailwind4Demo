@@ -1,14 +1,9 @@
 ﻿@rendermode @(new InteractiveServerRenderMode(prerender: false))
 
-<style>
-    fluent-switch.darkModeSwitch {
-        --neutral-foreground-rest: var(--fill-strong-focus);
-    }
-</style>
-
 <FluentDesignTheme @bind-Mode="@Mode"
                    @bind-OfficeColor="@OfficeColor"
                    OnLoaded="@OnLoaded"
+                   OnLuminanceChanged="@OnLuminanceChanged"
                    StorageName="theme" />
 
 <FluentButton BackgroundColor="var(--accent-fill-stealth)" OnClick="@SwitchTheme" Title="Theme Settings">
@@ -17,19 +12,26 @@
 
 @code {
 
-    private RenderFragment ThemeSettingsIcon() =>
-        @<FluentIcon Value="@(new Icons.Regular.Size20.DarkTheme())" Color="Color.Lightweight" Title="Theme Mode" />;
+    [CascadingParameter]
+    public MainLayout mainLayout { get; set; } = default!;
 
     public DesignThemeModes Mode { get; set; }
 
     public OfficeColor? OfficeColor { get; set; }
 
     private bool _isDark = false;
+    
+    private RenderFragment ThemeSettingsIcon() =>
+        @<FluentIcon Value="@(new Icons.Regular.Size20.DarkTheme())" Color="Color.Lightweight" Title="Theme Mode" />;
 
     void OnLoaded(LoadedEventArgs e)
     {
-        // for scenarios where System is turned on ... force theme to light or dark
         IsDark = e.IsDark;
+    }
+
+    void OnLuminanceChanged(LuminanceChangedEventArgs e)
+    {
+        mainLayout.UpdateDarkMode(e.IsDark);
     }
 
     public bool IsDark

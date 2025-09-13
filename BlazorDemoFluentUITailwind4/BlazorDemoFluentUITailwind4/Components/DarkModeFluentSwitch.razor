@@ -6,7 +6,7 @@
                    OnLuminanceChanged="@OnLuminanceChanged"
                    StorageName="theme" />
 
-<FluentButton BackgroundColor="var(--accent-fill-stealth)" OnClick="@SwitchTheme" Title="Theme Settings">
+<FluentButton BackgroundColor="var(--accent-fill-stealth)" OnClick="@SwitchTheme" Title="@themeToolTip">
     @ThemeSettingsIcon()
 </FluentButton>
 
@@ -20,18 +20,24 @@
     public OfficeColor? OfficeColor { get; set; }
 
     private bool _isDark = false;
-    
+
+    private string themeToolTip = "";
+    private string darkThemeTooltip = "Click for Light Mode";
+    private string lightThemeTooltip = "Click for Dark Mode";
+
     private RenderFragment ThemeSettingsIcon() =>
         @<FluentIcon Value="@(new Icons.Regular.Size20.DarkTheme())" Color="Color.Lightweight" Title="Theme Mode" />;
 
     void OnLoaded(LoadedEventArgs e)
     {
         IsDark = e.IsDark;
+        themeToolTip = IsDark ? darkThemeTooltip : lightThemeTooltip;
     }
 
     void OnLuminanceChanged(LuminanceChangedEventArgs e)
     {
         mainLayout.UpdateDarkMode(e.IsDark);
+        themeToolTip = e.IsDark ? darkThemeTooltip : lightThemeTooltip;
     }
 
     public bool IsDark
@@ -41,11 +47,13 @@
         {
             _isDark = value;
             Mode = _isDark ? DesignThemeModes.Dark : DesignThemeModes.Light;
+            themeToolTip = _isDark ? darkThemeTooltip : lightThemeTooltip;
         }
     }
 
     private void SwitchTheme()
     {
         Mode = Mode != DesignThemeModes.Dark ? DesignThemeModes.Dark : DesignThemeModes.Light;
+        themeToolTip = Mode == DesignThemeModes.Dark ? darkThemeTooltip : lightThemeTooltip;
     }
 }

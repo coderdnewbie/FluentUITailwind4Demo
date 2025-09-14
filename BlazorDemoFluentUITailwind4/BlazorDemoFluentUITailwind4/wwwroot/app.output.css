@@ -2538,6 +2538,10 @@ h6 {
   font-size: var(--type-ramp-base-font-size);
   line-height: var(--type-ramp-base-line-height);
 }
+svg {
+  display: unset;
+  vertical-align: unset;
+}
 .unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;

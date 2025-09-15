@@ -90,8 +90,8 @@ h6 {
 }
 
 svg {
-    display: unset;
-    vertical-align: unset;
+    display: revert;
+    vertical-align: revert;
 }
 
 .unselectable {

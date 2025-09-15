@@ -2539,8 +2539,8 @@ h6 {
   line-height: var(--type-ramp-base-line-height);
 }
 svg {
-  display: unset;
-  vertical-align: unset;
+  display: revert;
+  vertical-align: revert;
 }
 .unselectable {
   -webkit-touch-callout: none;

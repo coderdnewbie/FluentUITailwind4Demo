@@ -1,6 +1,6 @@
 <Project>
 	<PropertyGroup>
-		<TailwindToolsVersion Condition="'$(TailwindToolsVersion)' == ''">2.2.12</TailwindToolsVersion>
+		<TailwindToolsVersion Condition="'$(TailwindToolsVersion)' == ''">2.2.13</TailwindToolsVersion>
 	</PropertyGroup>
 
 	<Target Name="TailwindBuild" BeforeTargets="CoreBuild" DependsOnTargets="GetTailwindInputs; AcquireTailwindTooling"

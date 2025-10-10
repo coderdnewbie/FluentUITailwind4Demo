@@ -1,0 +1,35 @@
+﻿@page "/resizers"
+@rendermode InteractiveServer
+
+<PageTitle>Components - Community Toolkit</PageTitle>
+
+<h3>Components</h3>
+
+<h4>&nbsp;&nbsp; Resizers</h4>
+
+<div class="grid grid-cols-12 gap-2">
+    <div class="col-span-12 rounded-md p-4 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6">
+        <FluentCxResizer>
+            <FluentCard MinimalStyle="true">
+                <p>Just some content in a card</p>
+
+                <FluentButton Class="mb-4" Appearance="Appearance.Accent">Hello</FluentButton>
+                
+                <p>No Width or Height has been specified.</p>
+            </FluentCard>
+        </FluentCxResizer>
+    </div>
+    <div class="col-span-12 rounded-md p-4 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6">
+        <FluentCxResizer>
+            <FluentButton>
+                Button inside a Resizer Component
+            </FluentButton>
+        </FluentCxResizer>
+    </div>
+</div>
+
+
+@code {
+
+}
+

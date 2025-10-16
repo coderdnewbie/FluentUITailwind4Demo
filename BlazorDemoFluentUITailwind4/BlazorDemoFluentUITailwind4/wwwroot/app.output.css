@@ -1175,7 +1175,7 @@
     margin-left: calc(var(--spacing) * 4);
   }
   .carousel-item {
-    @layer daisyui.modifier {
+    @layer daisyui.component {
       box-sizing: content-box;
       display: flex;
       flex: none;

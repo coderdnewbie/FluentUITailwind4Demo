@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BlazorDemoFluentUITailwind4/BlazorDemoFluentUITailwind4.Client/BlazorDemoFluentUITailwind4.Client.csproj" />
+  <Project Path="BlazorDemoFluentUITailwind4/BlazorDemoFluentUITailwind4/BlazorDemoFluentUITailwind4.csproj" />
+</Solution>

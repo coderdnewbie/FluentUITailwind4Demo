@@ -244,7 +244,7 @@
 }
 @layer utilities {
   .menu {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       display: flex;
       width: fit-content;
       flex-direction: column;
@@ -422,11 +422,11 @@
   }
   .btn {
     :where(&) {
-      @layer daisyui.component {
+      @layer daisyui.l1.l2.l3 {
         width: unset;
       }
     }
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       display: inline-flex;
       flex-shrink: 0;
       cursor: pointer;
@@ -516,7 +516,7 @@
       }
     }
     &:disabled {
-      @layer daisyui.modifier {
+      @layer daisyui.l1.l2 {
         &:not(.btn-link, .btn-ghost) {
           background-color: var(--color-base-content);
           @supports (color: color-mix(in lab, red, red)) {
@@ -534,7 +534,7 @@
       }
     }
     &[disabled] {
-      @layer daisyui.modifier {
+      @layer daisyui.l1.l2 {
         &:not(.btn-link, .btn-ghost) {
           background-color: var(--color-base-content);
           @supports (color: color-mix(in lab, red, red)) {
@@ -553,7 +553,7 @@
     }
   }
   .loading {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       pointer-events: none;
       display: inline-block;
       aspect-ratio: 1 / 1;
@@ -570,7 +570,7 @@
     visibility: visible;
   }
   .toggle {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       border: var(--border) solid currentColor;
       color: var(--input-color);
       position: relative;
@@ -705,7 +705,7 @@
     }
   }
   .checkbox {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       border: var(--border) solid var(--input-color, var(--color-base-content));
       @supports (color: color-mix(in lab, red, red)) {
         border: var(--border) solid var(--input-color, color-mix(in oklab, var(--color-base-content) 20%, #0000));
@@ -784,14 +784,14 @@
       }
     }
     &:disabled {
-      @layer daisyui.modifier {
+      @layer daisyui.l1.l2 {
         cursor: not-allowed;
         opacity: 20%;
       }
     }
   }
   .radio {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       position: relative;
       display: inline-block;
       flex-shrink: 0;
@@ -848,14 +848,14 @@
       }
     }
     &:disabled {
-      @layer daisyui.modifier {
+      @layer daisyui.l1.l2 {
         cursor: not-allowed;
         opacity: 20%;
       }
     }
   }
   .rating {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       position: relative;
       display: inline-flex;
       vertical-align: middle;
@@ -899,7 +899,7 @@
         scale: 1.1;
       }
     }
-    @layer daisyui.modifier {
+    @layer daisyui.l1.l2 {
       &.rating-xs :where(*:not(.rating-hidden)) {
         width: calc(0.25rem * 4);
         height: calc(0.25rem * 4);
@@ -923,7 +923,7 @@
     }
   }
   .card {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -1161,7 +1161,7 @@
     margin-left: calc(var(--spacing) * 4);
   }
   .carousel-item {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       box-sizing: content-box;
       display: flex;
       flex: none;
@@ -1169,7 +1169,7 @@
     }
   }
   .status {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       display: inline-block;
       aspect-ratio: 1 / 1;
       width: calc(0.25rem * 2);
@@ -1194,7 +1194,7 @@
     }
   }
   .carousel {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       display: inline-flex;
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
@@ -1214,7 +1214,7 @@
     -webkit-line-clamp: 3;
   }
   .mask {
-    @layer daisyui.component {
+    @layer daisyui.l1.l2.l3 {
       display: inline-block;
       vertical-align: middle;
       mask-size: contain;
@@ -1235,7 +1235,7 @@
     display: inline-flex;
   }
   .btn-circle {
-    @layer daisyui.modifier {
+    @layer daisyui.l1.l2 {
       border-radius: calc(infinity * 1px);
       padding-inline: calc(0.25rem * 0);
       width: var(--size);
@@ -1633,7 +1633,7 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .mask-star {
-    @layer daisyui.modifier {
+    @layer daisyui.l1.l2 {
       mask-image: url("data:image/svg+xml,%3csvg width='192' height='180' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m96 137.263-58.779 42.024 22.163-68.389L.894 68.481l72.476-.243L96 0l22.63 68.238 72.476.243-58.49 42.417 22.163 68.389z' fill-rule='evenodd'/%3e%3c/svg%3e");
     }
   }
@@ -1985,7 +1985,7 @@
     transition-timing-function: var(--ease-in-out);
   }
   .btn-soft {
-    @layer daisyui.modifier {
+    @layer daisyui.l1 {
       &:not( .btn-active, :hover, :active:focus, :focus-visible, input:checked:not(.filter .btn), :disabled, [disabled], .btn-disabled ) {
         --btn-shadow: "";
         --btn-fg: var(--btn-color, var(--color-base-content));
@@ -2033,63 +2033,63 @@
     }
   }
   .btn-sm {
-    @layer daisyui.modifier {
+    @layer daisyui.l1.l2 {
       --fontsize: 0.75rem;
       --btn-p: 0.75rem;
       --size: calc(var(--size-field, 0.25rem) * 8);
     }
   }
   .btn-xs {
-    @layer daisyui.modifier {
+    @layer daisyui.l1.l2 {
       --fontsize: 0.6875rem;
       --btn-p: 0.5rem;
       --size: calc(var(--size-field, 0.25rem) * 6);
     }
   }
   .btn-accent {
-    @layer daisyui.modifier.color {
+    @layer daisyui.l1.l2 {
       --btn-color: var(--color-accent);
       --btn-fg: var(--color-accent-content);
     }
   }
   .btn-error {
-    @layer daisyui.modifier.color {
+    @layer daisyui.l1.l2 {
       --btn-color: var(--color-error);
       --btn-fg: var(--color-error-content);
     }
   }
   .btn-info {
-    @layer daisyui.modifier.color {
+    @layer daisyui.l1.l2 {
       --btn-color: var(--color-info);
       --btn-fg: var(--color-info-content);
     }
   }
   .btn-neutral {
-    @layer daisyui.modifier.color {
+    @layer daisyui.l1.l2 {
       --btn-color: var(--color-neutral);
       --btn-fg: var(--color-neutral-content);
     }
   }
   .btn-primary {
-    @layer daisyui.modifier.color {
+    @layer daisyui.l1.l2 {
       --btn-color: var(--color-primary);
       --btn-fg: var(--color-primary-content);
     }
   }
   .btn-secondary {
-    @layer daisyui.modifier.color {
+    @layer daisyui.l1.l2 {
       --btn-color: var(--color-secondary);
       --btn-fg: var(--color-secondary-content);
     }
   }
   .btn-success {
-    @layer daisyui.modifier.color {
+    @layer daisyui.l1.l2 {
       --btn-color: var(--color-success);
       --btn-fg: var(--color-success-content);
     }
   }
   .btn-warning {
-    @layer daisyui.modifier.color {
+    @layer daisyui.l1.l2 {
       --btn-color: var(--color-warning);
       --btn-fg: var(--color-warning-content);
     }

@@ -2841,6 +2841,11 @@ svg {
     background-position: -50%;
   }
 }
+@keyframes menu {
+  0% {
+    opacity: 0;
+  }
+}
 @keyframes progress {
   50% {
     background-position-x: -115%;
